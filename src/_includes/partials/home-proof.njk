@@ -10,11 +10,11 @@
     <div class="home-proof__grid">
       {%- for item in homeCopy.proof %}
       <div class="home-proof__card">
-        <div class="home-proof__stamp">
-          <img src="/assets/img/ornaments/serial-stamp.svg" alt="" width="80" height="28" />
-          <span class="home-proof__serial">{{ item.serial }}</span>
-        </div>
-        <div class="home-proof__img img-grade" style="background-image:url('{{ item.image }}')"></div>
+        <span class="stamp" aria-hidden="true">
+          <img src="/assets/img/ornaments/serial-stamp.svg" alt="" width="80" height="28" loading="lazy" />
+          <span class="stamp__text">{{ item.serial }}</span>
+        </span>
+        <div class="home-proof__img img-grade" style="background-image:url('{{ item.image }}')" role="img" aria-label="{{ item.title }}"></div>
         <div class="home-proof__body">
           <h3>{{ item.title }}</h3>
           <p>{{ item.text }}</p>

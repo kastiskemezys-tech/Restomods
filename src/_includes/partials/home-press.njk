@@ -1,7 +1,7 @@
 {# Press strip — minimal credentials #}
 <section class="home-press section" aria-label="Credentials">
   <div class="container">
-    <img class="home-press__rule" src="/assets/img/ornaments/rule-double.svg" alt="" width="160" height="12" />
+    <img class="home-press__rule" src="/assets/img/ornaments/rule-double.svg" alt="" width="160" height="12" loading="lazy" />
 
     <div class="home-press__grid">
       {%- set ornamentMap = {
@@ -12,7 +12,7 @@
       {%- for item in homeCopy.press %}
       <div class="home-press__item">
         {%- if item.icon and ornamentMap[item.icon] %}
-        <img class="home-press__ornament" src="{{ ornamentMap[item.icon] }}" alt="" width="40" height="40" />
+        <img class="home-press__ornament" src="{{ ornamentMap[item.icon] }}" alt="" width="40" height="40" loading="lazy" />
         {%- endif %}
         <p class="home-press__label">{{ item.label }}</p>
         <p class="home-press__text">{{ item.text }}</p>
