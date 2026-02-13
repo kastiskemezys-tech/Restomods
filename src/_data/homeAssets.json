@@ -1,0 +1,39 @@
+{
+  "brand": {
+    "logoWhite": "/assets/img/brand/kastis-logo-white.png",
+    "logoDark": "/assets/img/brand/kastis-logo-white.png",
+    "badge": ""
+  },
+  "heroGrid": [
+    "/assets/img/home/hero-grid/hero-01.jpg",
+    "/assets/img/home/hero-grid/hero-02.jpg",
+    "/assets/img/home/hero-grid/hero-03.jpg",
+    "/assets/img/home/hero-grid/hero-04.jpg",
+    "/assets/img/home/hero-grid/hero-05.jpg",
+    "/assets/img/home/hero-grid/hero-06.jpg",
+    "/assets/img/home/hero-grid/hero-07.jpg",
+    "/assets/img/home/hero-grid/hero-08.jpg",
+    "/assets/img/home/hero-grid/hero-09.jpg"
+  ],
+  "models": [
+    "/assets/img/home/models/model-01.jpg",
+    "/assets/img/home/models/model-02.jpg",
+    "/assets/img/home/models/model-03.jpg",
+    "/assets/img/home/models/model-04.jpg"
+  ],
+  "teaser": "/assets/img/home/teasers/teaser-01.jpg",
+  "cta": [
+    "/assets/img/home/cta/cta-01.jpg",
+    "/assets/img/home/cta/cta-02.jpg",
+    "/assets/img/home/cta/cta-03.jpg"
+  ],
+  "patterns": {
+    "dark1": "",
+    "dark2": "",
+    "trans1": "",
+    "topo": ""
+  },
+  "ui": {
+    "rotateDevice": ""
+  }
+}
