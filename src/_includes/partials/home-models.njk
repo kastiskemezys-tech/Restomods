@@ -1,0 +1,19 @@
+{# Models grid — 4 cards from homeAssets.models #}
+<section class="home-models section" aria-label="Models">
+  <div class="container">
+    <p class="kicker">The Range</p>
+    <h2>Models</h2>
+
+    <div class="home-models__grid">
+      {%- set titles = ["KR Classic", "KR Sport", "KR Expedition", "KR Bespoke"] %}
+      {%- for img in homeAssets.models %}
+      <a class="home-models__card" href="/pages/models/" style="background-image:url('{{ img }}')">
+        <span class="home-models__card-inner">
+          <span class="home-models__card-title">{{ titles[loop.index0] }}</span>
+          <span class="home-models__card-micro">View details</span>
+        </span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>

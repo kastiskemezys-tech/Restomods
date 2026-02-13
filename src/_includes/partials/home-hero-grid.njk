@@ -1,0 +1,30 @@
+{# Hero mosaic — 3×3 grid with overlay #}
+<section class="home-hero" aria-label="Kastis KR Series — Re-engineered Range Rover Classic">
+  <div class="home-hero__grid">
+    {%- for img in homeAssets.heroGrid %}
+    <div class="home-hero__cell" style="background-image:url('{{ img }}')"></div>
+    {%- endfor %}
+  </div>
+
+  <div class="home-hero__overlay">
+    <div class="container home-hero__inner">
+      <img
+        class="home-hero__logo"
+        src="{{ homeAssets.brand.logoWhite }}"
+        alt="Kastis"
+        width="180"
+        height="auto"
+        loading="eager"
+      />
+      <h1>Re-Engineered Range Rover Classic</h1>
+      <p class="home-hero__sub">
+        Each Kastis KR Series is stripped to bare metal, re-engineered from the ground up,
+        and hand-built in our Kaunas workshop to a standard the factory never imagined.
+      </p>
+      <div class="home-hero__ctas">
+        <a class="btn btn--primary" href="/pages/models/">Explore Models</a>
+        <a class="btn btn--ghost" href="/pages/contact/">Contact</a>
+      </div>
+    </div>
+  </div>
+</section>

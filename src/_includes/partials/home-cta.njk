@@ -1,0 +1,21 @@
+{# CTA strip — 3 blocks from homeAssets.cta #}
+<section class="home-cta section" aria-label="Services">
+  <div class="container">
+    {%- set ctaData = [
+      { "title": "Services",       "desc": "Full restoration, mechanical rebuild, and bespoke commissions.", "href": "/pages/services/" },
+      { "title": "Upgrades",       "desc": "Performance, interior, and technology upgrades for existing Classics.", "href": "/pages/upgrades/" },
+      { "title": "Configurator",   "desc": "Spec your KR Series from chassis to stitching.", "href": "/pages/configurator/" }
+    ] %}
+
+    <div class="home-cta__grid">
+      {%- for item in ctaData %}
+      <a class="home-cta__block" href="{{ item.href }}" style="background-image:url('{{ homeAssets.cta[loop.index0] }}')">
+        <span class="home-cta__block-inner">
+          <span class="home-cta__block-title">{{ item.title }}</span>
+          <span class="home-cta__block-desc">{{ item.desc }}</span>
+        </span>
+      </a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
