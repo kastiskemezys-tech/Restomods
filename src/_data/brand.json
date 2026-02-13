@@ -3,5 +3,8 @@
   "location": "Kaunas, Lithuania",
   "tagline": "Re-engineered Range Rover Classic",
   "accentBrass": "#b08d57",
-  "accentOxblood": "#5a1a1a"
+  "accentOxblood": "#5a1a1a",
+  "serialPrefix": "KR",
+  "buildLocationShort": "Kaunas",
+  "appointmentLine": "Kaunas, Lithuania — by appointment"
 }

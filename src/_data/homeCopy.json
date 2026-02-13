@@ -18,5 +18,42 @@
     { "title": "KR Sport",       "subtitle": "Lowered stance, V8 bias, road-focused" },
     { "title": "KR Expedition",  "subtitle": "Long-range, built for distance" },
     { "title": "KR Bespoke",     "subtitle": "Your specification, our execution" }
+  ],
+  "proof": [
+    {
+      "serial": "KR–01",
+      "title": "Chassis-down rebuild",
+      "text": "Every chassis is fully stripped, acid-dipped, zinc-coated, and documented before a single bolt is refitted. Structural integrity is verified to aerospace-grade tolerances.",
+      "image": "/assets/img/home/hero-grid/hero-04.jpg"
+    },
+    {
+      "serial": "KR–02",
+      "title": "Metal, paint, sealing",
+      "text": "Hand-finished aluminium panels, multi-stage primer and paint, full underbody sealing. Each surface is photographed at every stage.",
+      "image": "/assets/img/home/hero-grid/hero-07.jpg"
+    },
+    {
+      "serial": "KR–03",
+      "title": "Assembly record & testing",
+      "text": "Documented torque values, dynamometer testing, 200 km road validation. A complete build dossier accompanies every vehicle delivered.",
+      "image": "/assets/img/home/hero-grid/hero-02.jpg"
+    }
+  ],
+  "press": [
+    {
+      "label": "Independent",
+      "text": "Single-workshop production. No outsourcing of structural or mechanical work.",
+      "icon": "seal"
+    },
+    {
+      "label": "By appointment",
+      "text": "Each commission begins with a private consultation at our Kaunas atelier.",
+      "icon": "rule"
+    },
+    {
+      "label": "Build slot",
+      "text": "Limited annual production. Current lead time available on enquiry.",
+      "icon": "stamp"
+    }
   ]
 }
