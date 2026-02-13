@@ -534,66 +534,114 @@ a:hover {
 }
 
 /* ==========================================================================
-   HOME — hero mosaic + models grid + CTA strip   (≤180 lines)
+   HOME — RITE / LODGE / MACHINE
    ========================================================================== */
 
-/* Hero */
+:root {
+  --brass: #b08d57;
+  --oxblood: #5a1a1a;
+  --home-radius: 20px;
+}
+
+/* Grain overlay utility */
+.grain { position: relative; }
+.grain::before {
+  content: ""; position: absolute; inset: 0; z-index: 2;
+  background: url('/assets/img/textures/noise.svg') repeat;
+  opacity: 0.10; pointer-events: none; mix-blend-mode: overlay;
+}
+
+/* Focus-visible brass accent (home sections) */
+.home-hero a:focus-visible,
+.home-models a:focus-visible,
+.home-cta a:focus-visible,
+.home-credo a:focus-visible {
+  outline: 2px solid var(--brass); outline-offset: 3px;
+}
+
+/* --- Hero --- */
 .home-hero { position: relative; min-height: min(92vh, 900px); overflow: hidden; }
+
 .home-hero__grid {
   position: absolute; inset: 0; display: grid;
   grid-template-columns: repeat(3, 1fr); grid-template-rows: repeat(3, 1fr); gap: 2px;
 }
 .home-hero__cell {
   background-size: cover; background-position: center;
-  filter: saturate(0.95) contrast(1.05);
+  filter: saturate(0.90) contrast(1.05);
 }
+
 .home-hero__overlay {
-  position: relative; min-height: min(92vh, 900px);
-  display: flex; align-items: center; justify-content: center; text-align: center;
+  position: relative; z-index: 1; min-height: min(92vh, 900px);
+  display: flex; align-items: center;
   background:
-    radial-gradient(ellipse 120% 80% at 50% 50%, rgba(11,12,14,.72), rgba(11,12,14,.92) 70%),
-    linear-gradient(to bottom, rgba(11,12,14,.3), rgba(11,12,14,.85));
+    radial-gradient(ellipse 100% 70% at 35% 50%, rgba(11,12,14,.58), rgba(11,12,14,.82) 70%),
+    linear-gradient(to bottom, rgba(11,12,14,.2), rgba(11,12,14,.7));
 }
-.home-hero__inner { max-width: 700px; }
-.home-hero__logo {
-  display: block; margin: 0 auto 28px; width: 160px; height: auto; opacity: 0.92;
+
+.home-hero__inner { max-width: 640px; text-align: left; }
+
+/* Watermark seal behind hero text */
+.home-hero__seal {
+  position: absolute; z-index: -1;
+  width: clamp(280px, 40vw, 480px); height: clamp(280px, 40vw, 480px);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+  background-size: contain; background-repeat: no-repeat; background-position: center;
+  opacity: 0.08; pointer-events: none;
 }
+
 .home-hero__inner h1 { margin-bottom: 20px; }
 .home-hero__sub {
   color: var(--muted); font-size: clamp(15px, 1.2vw, 17px);
-  line-height: 1.65; max-width: 62ch; margin: 0 auto 32px;
+  line-height: 1.7; max-width: 54ch; margin: 0 0 36px;
 }
-.home-hero__ctas { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+.home-hero__ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 
-/* Shared card surface (models + CTA) */
+/* --- Shared card surface (models + CTA) --- */
 .home-models__card,
 .home-cta__block {
-  display: flex; align-items: flex-end; border-radius: 20px; overflow: hidden;
-  background-size: cover; background-position: center;
-  filter: saturate(0.95) contrast(1.05);
+  display: flex; align-items: flex-end; border-radius: var(--home-radius);
+  overflow: hidden; background-size: cover; background-position: center;
+  filter: saturate(0.90) contrast(1.05);
   text-decoration: none; transition: filter 150ms ease;
 }
 .home-models__card:hover,
-.home-cta__block:hover { filter: saturate(1) contrast(1.08); opacity: 1; }
+.home-cta__block:hover { filter: saturate(1) contrast(1.10); opacity: 1; }
 
+/* Bottom-only gradient (not full darkness) */
 .home-models__card-inner,
 .home-cta__block-inner {
   display: flex; flex-direction: column; width: 100%;
-  background: linear-gradient(to top, rgba(0,0,0,.7), transparent);
+  background: linear-gradient(to top, rgba(0,0,0,.65) 0%, rgba(0,0,0,.15) 50%, transparent 100%);
 }
 
-/* Models grid */
+/* --- Models grid --- */
 .home-models__grid {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; margin-top: 40px;
 }
 .home-models__card { aspect-ratio: 4 / 3; }
-.home-models__card-inner { gap: 2px; padding: 20px 22px; }
-.home-models__card-title { font-size: 18px; font-weight: 600; color: var(--fg); }
+.home-models__card--feature { grid-column: span 2; aspect-ratio: 21 / 9; }
+
+.home-models__card-inner { gap: 1px; padding: 20px 22px; }
 .home-models__card-micro {
-  font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted);
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted);
+  order: -1;
+}
+.home-models__card-title { font-size: 20px; font-weight: 600; color: var(--fg); }
+
+/* --- Credo --- */
+.home-credo__inner { max-width: 680px; text-align: center; margin: 0 auto; }
+.home-credo__inner h2 { margin-bottom: 40px; }
+.home-credo__body { display: flex; flex-direction: column; align-items: center; gap: 28px; }
+.home-credo__body p {
+  color: var(--muted); font-size: 15px; line-height: 1.75; max-width: 58ch; margin: 0;
+}
+.home-credo__divider { display: block; opacity: 0.6; }
+.home-credo__rule {
+  width: 48px; height: 1px; background: var(--brass); margin: 48px auto 0; opacity: 0.5;
 }
 
-/* CTA strip */
+/* --- CTA strip --- */
 .home-cta__grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 40px;
 }
@@ -602,12 +650,16 @@ a:hover {
 .home-cta__block-title { font-size: 16px; font-weight: 600; color: var(--fg); }
 .home-cta__block-desc { font-size: 13px; line-height: 1.5; color: var(--muted); }
 
-/* HOME responsive */
+/* --- HOME responsive --- */
 @media (max-width: 768px) {
-  .home-hero__grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr); }
+  .home-hero__grid {
+    grid-template-columns: repeat(2, 1fr); grid-template-rows: repeat(4, 1fr);
+  }
   .home-hero__cell:nth-child(n+7) { display: none; }
-  .home-hero__logo { width: 120px; }
+  .home-hero__seal { width: 220px; height: 220px; }
+  .home-hero__inner { text-align: left; }
   .home-models__grid { grid-template-columns: 1fr; }
+  .home-models__card--feature { grid-column: span 1; aspect-ratio: 4 / 3; }
   .home-cta__grid { grid-template-columns: 1fr; }
   .home-cta__block { aspect-ratio: 16 / 9; }
 }

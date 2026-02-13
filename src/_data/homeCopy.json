@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "h1": "Re-Engineered Range Rover Classic",
+    "subhead": "Each Kastis KR Series is stripped to bare metal, re-engineered from the ground up, and hand-built in our Kaunas workshop to a standard the factory never imagined.",
+    "ctaPrimary": "Explore Models",
+    "ctaSecondary": "Contact"
+  },
+  "credo": {
+    "title": "The Method",
+    "lines": [
+      "Every vehicle begins as a complete strip-down — chassis bare, identity erased — then rebuilt to documented torque values and photographed assembly stages.",
+      "We do not batch-produce. One vehicle, one team, start to finish. Metalwork, paint, mechanical, and trim under a single roof in Kaunas.",
+      "The result is a machine that looks period-correct at a glance but reveals its true nature the moment you drive it."
+    ]
+  },
+  "models": [
+    { "title": "KR Classic",     "subtitle": "The original silhouette, perfected" },
+    { "title": "KR Sport",       "subtitle": "Lowered stance, V8 bias, road-focused" },
+    { "title": "KR Expedition",  "subtitle": "Long-range, built for distance" },
+    { "title": "KR Bespoke",     "subtitle": "Your specification, our execution" }
+  ]
+}

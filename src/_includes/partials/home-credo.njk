@@ -1,0 +1,18 @@
+{# Credo — The Method #}
+<section class="home-credo section section--border" aria-label="{{ homeCopy.credo.title }}">
+  <div class="container home-credo__inner">
+    <p class="kicker">Atelier / Kaunas</p>
+    <h2>{{ homeCopy.credo.title }}</h2>
+
+    <div class="home-credo__body">
+      {%- for line in homeCopy.credo.lines %}
+      <p>{{ line }}</p>
+      {%- if not loop.last %}
+      <img class="home-credo__divider" src="/assets/img/ornaments/divider-sigil.svg" alt="" width="120" height="12" />
+      {%- endif %}
+      {%- endfor %}
+    </div>
+
+    <div class="home-credo__rule"></div>
+  </div>
+</section>
