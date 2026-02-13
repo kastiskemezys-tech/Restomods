@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>{{ title }}{% if title and title != "Restomods" %} · Restomods{% endif %}</title>
+  <meta name="description" content="{{ description | default('Bespoke Range Rover Classic restorations and restomods.') }}" />
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+</head>
+<body>
+  {% include "partials/header.njk" %}
+  <main>{{ content | safe }}</main>
+  {% include "partials/footer.njk" %}
+  <script src="/assets/js/menu.js" defer></script>
+</body>
+</html>
